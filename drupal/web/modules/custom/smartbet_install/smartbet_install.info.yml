@@ -1,0 +1,30 @@
+name: 'Smartbet Install'
+type: module
+description: '\Install procedure for Smartbet site'
+core: 8.x
+package: 'smartbet'
+
+dependencies:
+  - content_moderation
+  - responsive_image
+  - syslog
+  - statistics
+  - admin_toolbar
+  - adminimal_admin_toolbar
+  - chosen
+  - color_field
+  - config_update
+  - ctools
+  - ds
+  - features
+  - features_ui
+  - field_collection
+  - field_group
+  - libraries
+  - metatag
+  - panelizer
+  - panels
+  - pathauto
+  - radix_layouts
+  - search_api
+  - token

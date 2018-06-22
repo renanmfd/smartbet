@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Installation and uninstallation functions.
+ */
+
+/**
+ * Renames config to remove redundant 'chosen_' prefix.
+ */
+function smartbet_install_install() {
+  // Enable and set default and admin themes.
+  \Drupal::service('theme_installer')->install(['adminimal_theme', 'bootstrap']);
+  $theme = \Drupal::configFactory()->getEditable('system.theme')
+    ->set('default', 'bootstrap')
+    ->set('admin', 'adminimal_theme')
+    ->save();
+
+  // Disable core modules not used.
+  \Drupal::service('module_installer')->uninstall(['rdf', 'search']);
+}

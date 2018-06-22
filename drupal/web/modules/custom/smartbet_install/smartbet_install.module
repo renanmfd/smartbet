@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains smartbet_install.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function smartbet_install_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the smartbet_install module.
+    case 'help.page.smartbet_install':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('\Install procedure for Smartbet site') . '</p>';
+      return $output;
+
+    default:
+  }
+}
